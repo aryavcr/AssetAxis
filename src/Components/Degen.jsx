@@ -4,7 +4,8 @@ import React from "react";
 function Degen() {
     return (
         
-        <div className="h-10 w-full">
+        <div className="h-fit w-fit">
+            
 
         </div>
     )

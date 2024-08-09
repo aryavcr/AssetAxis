@@ -3,7 +3,7 @@ import React from "react";
 
 function Centralized() {
     return (
-        <div className=" h-80 w-full">
+        <div className="h-full w-full">
 
         </div>
     )

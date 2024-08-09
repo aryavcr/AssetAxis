@@ -6,6 +6,7 @@ import { PiBankBold } from "react-icons/pi";
 import { SiBitcoinsv } from "react-icons/si";
 import { GiReceiveMoney } from "react-icons/gi";
 import { FaStar } from "react-icons/fa6";
+import { FaRing } from "react-icons/fa6";
 
 const data = [
   {
@@ -56,12 +57,11 @@ function Chart() {
   var [focus, setfocus] = useState(false);
 
   return (
-    <div className="pt-5  px-24 text-[#1a202c]">
-      <div className="heading tracking-tight font-['Lora'] text-4xl">
-        Asset<span className="italic">axis</span>{" "}
-      </div>
+    <div className="pt-5 px-24 text-[#1a202c]">
+      <div className="">
+        <span className=" flex heading tracking-tight font-['Lora'] text-4xl font-[400] italic">Assetaxis </span>  </div>
       <div className="subheading text-[#8c8cb1] text-sm">
-        Invest & earn passive yields on your assets.
+        Invest & earn passive yields on your assets. 
       </div>
       <div className="charts mt-10 flex gap-20">
         <div className="chart1 ">
@@ -115,38 +115,15 @@ function Chart() {
               <div className="vol text-xl font-medium ">$541,407,199</div>
             </div>
             <div className=" days flex items-center w-fit h-fit rounded-2xl border ml-48 font-semibold text-[#8c8cb1] border-[#d5d5fb]">
-              <button
-                onClick={() => setfocus(true)}
-                className={` rounded-xl py-1 px-3 m-1 ${
-                  focus ? "bg-[#d5d5fb] text-[#190037]" : "white"
-                }`}
-              >
-                7D
-              </button>
-              <button
-                onClick={() => setfocus(true)}
-                className={` rounded-xl py-1 px-3 m-1 ${
-                  focus ? "bg-[#d5d5fb] text-[#190037]" : "white"
-                }`}
-              >
-                30D
-              </button>
-              <button
-                onClick={() => setfocus(true)}
-                className={` rounded-xl py-1 px-3 m-1 ${
-                  focus ? "bg-[#d5d5fb] text-[#190037]" : "white"
-                }`}
-              >
-                90D
-              </button>
-              <button
-                onClick={() => setfocus(true)}
-                className={` rounded-xl py-1 px-3 m-1 ${
-                  focus ? "bg-[#d5d5fb] text-[#190037]" : "white"
-                }`}
-              >
-                180D
-              </button>
+              {dayss.map((value, index) => {
+                return (
+                  <>
+                    <button className={`rounded-xl py-1 px-3 m-1`}>
+                      {value}
+                    </button>
+                  </>
+                );
+              })}
             </div>
           </div>
           <div className="areac2 p-4 h-56">

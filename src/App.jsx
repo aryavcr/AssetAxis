@@ -10,11 +10,13 @@ import Allcards from "./Components/Allcards";
 function App() {
   return (
     <div className="w-full h-full">
+      <div>
       <div className="w-full h-fit bg-[#f0f0ff]">
         <Navbar />
         <Chart />
+        </div>
+        <Decentralized className="" />
       </div>
-      <Allcards className="" />
     </div>
   );
 }
